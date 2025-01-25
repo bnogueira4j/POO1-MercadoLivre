@@ -1,5 +1,5 @@
 public class Carro extends Veiculo {
-    int portas;
+    private int portas;
 
     public Carro(String cor, String modelo, String placa, int ano, int portas) {
         super(cor, modelo, placa, ano);
@@ -29,6 +29,10 @@ public class Carro extends Veiculo {
 
     public int getAno() {
         return ano;
+    }
+
+    public int getPortas() {
+        return portas;
     }
 
     @Override

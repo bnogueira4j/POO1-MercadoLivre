@@ -1,8 +1,11 @@
-public class Veiculo {
+public abstract class Veiculo {
     String cor;
     String modelo;
     String placa;
     int ano;
+    int velocidade;
+
+    public static final int VELOCIDADE_MAXIMA = 200;
 
     public Veiculo(String cor, String modelo, String placa, int ano) {
         this.cor = cor;
@@ -12,8 +15,13 @@ public class Veiculo {
     }
 
     void mover() {
-        System.out.println("Esta se movendo");
+        if(velocidade <= VELOCIDADE_MAXIMA) {
+            System.out.println("Esta se movendo: " + placa);
+        } else {
+            System.out.println("ERRO!");
+        }
     }
+
 
     @Override
     public String toString() {
@@ -24,4 +32,6 @@ public class Veiculo {
                 ", ano=" + ano +
                 '}';
     }
+
+
 }

@@ -1,5 +1,5 @@
 public class Moto extends Veiculo{
-    boolean temCapacete;
+    private boolean temCapacete;
 
     public Moto(String cor, String modelo, String placa, int ano, boolean temCapacete) {
         super(cor, modelo, placa, ano);
@@ -8,6 +8,10 @@ public class Moto extends Veiculo{
 
     public void darPartida() {
         System.out.println("Partida da Moto");
+    }
+
+    public boolean isTemCapacete() {
+        return temCapacete;
     }
 
     @Override

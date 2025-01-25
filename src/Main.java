@@ -1,19 +1,20 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        Carro carro = new Carro("vermelho", "Fusca", "ABC123", 1969, 4);
-        System.out.println(carro);
 
-        carro.ligar();
-        carro.mover();
-        carro.desligar();
+        List<Veiculo> veiculosGerados = new ArrayList<>();
 
-        Moto moto = new Moto("azul", "Honda", "CVC143", 2001, true);
-        System.out.println(moto);
-        moto.mover();
-        moto.darPartida();
+        for (int i = 0; i < 10; i++) {
+            Carro carro = new Carro("vermelho", "Fusca", "CAR" + i, 1969, 4);
+            veiculosGerados.add(carro);
 
-        Veiculo veiculo = new Veiculo("vermelho", "Fusca", "ABC123", 2008);
+            Moto moto = new Moto("azul", "Honda", "MOT" + i, 2001, true);
+            veiculosGerados.add(moto);
+        }
 
-        System.out.println(veiculo);
+
+        MovimentacaoDeVeiculos.movimentar(veiculosGerados);
     }
 }
