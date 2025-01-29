@@ -1,9 +1,9 @@
 public abstract class Veiculo {
-    String cor;
-    String modelo;
-    String placa;
-    int ano;
-    int velocidade;
+    private String cor;
+    private String modelo;
+    private String placa;
+    private int ano;
+    private int velocidade;
 
     public static final int VELOCIDADE_MAXIMA = 200;
 
@@ -22,6 +22,25 @@ public abstract class Veiculo {
         }
     }
 
+    public String getCor() {
+        return cor;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public String getPlaca() {
+        return placa;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public int getVelocidade() {
+        return velocidade;
+    }
 
     @Override
     public String toString() {

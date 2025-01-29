@@ -1,4 +1,4 @@
-public class Moto extends Veiculo{
+public class Moto extends Veiculo implements Abastecimento {
     private boolean temCapacete;
 
     public Moto(String cor, String modelo, String placa, int ano, boolean temCapacete) {
@@ -15,13 +15,18 @@ public class Moto extends Veiculo{
     }
 
     @Override
+    public void abastecer() {
+        System.out.println("Abastecer moto com GASOLINA");
+    }
+
+    @Override
     public String toString() {
         return "Moto{" +
                 "temCapacete=" + temCapacete +
-                ", cor='" + cor + '\'' +
-                ", modelo='" + modelo + '\'' +
-                ", placa='" + placa + '\'' +
-                ", ano=" + ano +
+                ", cor='" + getCor() + '\'' +
+                ", modelo='" + getModelo() + '\'' +
+                ", placa='" + getPlaca() + '\'' +
+                ", ano=" + getAno() +
                 '}';
     }
 }

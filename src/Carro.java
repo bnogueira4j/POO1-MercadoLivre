@@ -1,4 +1,4 @@
-public class Carro extends Veiculo {
+public class Carro extends Veiculo implements Abastecimento {
     private int portas;
 
     public Carro(String cor, String modelo, String placa, int ano, int portas) {
@@ -14,35 +14,23 @@ public class Carro extends Veiculo {
         System.out.println("Desligando carro");
     }
 
-
-    public String getCor() {
-        return cor;
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public String getPlaca() {
-        return placa;
-    }
-
-    public int getAno() {
-        return ano;
-    }
-
     public int getPortas() {
         return portas;
+    }
+
+    @Override
+    public void abastecer() {
+        System.out.println("Abastecer carro com FLEX");
     }
 
     @Override
     public String toString() {
         return "Carro{" +
                 "portas=" + portas +
-                ", cor='" + cor + '\'' +
-                ", modelo='" + modelo + '\'' +
-                ", placa='" + placa + '\'' +
-                ", ano=" + ano +
+                ", cor='" + getCor() + '\'' +
+                ", modelo='" + getModelo() + '\'' +
+                ", placa='" + getPlaca() + '\'' +
+                ", ano=" + getAno() +
                 '}';
     }
 }
