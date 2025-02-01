@@ -1,0 +1,4 @@
+package Funcionario;
+
+enum Cartao {
+}

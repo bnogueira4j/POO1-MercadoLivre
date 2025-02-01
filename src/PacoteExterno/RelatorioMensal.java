@@ -25,7 +25,7 @@ public class RelatorioMensal extends Funcionario {
                 dev.setSalario(novoSalario);
                 System.out.println("Cargo alterado do desenvolvedor para: " + dev.getCargo());
                 System.out.println("Salario alterado para: " + dev.getSalario());
-            } catch(NumberFormatException e) {
+            } catch(NumberFormatException | NullPointerException ex) {
                 System.out.println("ERRO: O salario deve ser apenas numeros.");
                 continue;
             } catch (Exception e) {
