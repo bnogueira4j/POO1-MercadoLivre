@@ -5,11 +5,10 @@ import java.time.DateTimeException;
 import java.time.LocalDate;
 
 public abstract class Pagamento {
-    private int codigo;
+    final int codigo;
     private String beneficiario;
     private double valor;
     private LocalDate vencimento;
-
 
     private static int contador = 1;
 

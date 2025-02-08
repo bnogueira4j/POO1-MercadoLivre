@@ -9,6 +9,7 @@ import java.util.Random;
 
 public class GeradorLotePagamento {
     private static Random gerador = new Random();
+
     public static List<Pagamento> gerarLote(int quantidade) {
         List<Pagamento> lotePagamentos = new ArrayList<>();
 
